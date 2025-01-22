@@ -1,0 +1,20 @@
+{
+    "manifest_version": 3,
+    "version": "1.0",
+    "name": "Complexity Analyzer",
+    "author": "Sagar Chaurasia",
+    "description": "Time Complexity Analyzer",
+    "content_scripts": [
+      {
+        "matches": ["*://*.leetcode.com/*"],
+        "js": ["App.jsx"]
+      }
+    ],
+    "action": {
+      
+      "default_popup": "index.html",
+      "default_title": "Analyze Complexity"
+    },
+    "permissions": []
+  }
+  

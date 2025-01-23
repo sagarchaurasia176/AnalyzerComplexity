@@ -6,15 +6,17 @@
     "description": "Time Complexity Analyzer",
     "content_scripts": [
       {
-        "matches": ["*://*.leetcode.com/*"],
-        "js": ["App.jsx"]
+        "matches": ["https://leetcode.com/problemset/*"],
+        "js": ["/src/App.jsx"]
       }
     ],
+    "background":{
+      "service_worker" : "background.js"
+    },
     "action": {
-      
       "default_popup": "index.html",
       "default_title": "Analyze Complexity"
     },
-    "permissions": []
+    "permissions": ["storage"]
   }
   
